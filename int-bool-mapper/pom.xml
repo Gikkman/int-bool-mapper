@@ -23,27 +23,27 @@
 	
 	<build>
 	<plugins> 
-		<plugin>
+		<plugin> <!-- Compile the plugin -->
 		  <groupId>org.apache.maven.plugins</groupId>
 		  <artifactId>maven-compiler-plugin</artifactId>
 		  <version>3.5.1</version>
 		  <configuration>
-		    <source>8</source>
-		    <target>8</target>
+		    <source>1.8</source>
+		    <target>1.8</target>
 		  </configuration>
 		</plugin>
 	   	     
 		<plugin>  <!-- Create sources.jar -->
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-source-plugin</artifactId>
-		<executions>
-			<execution>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-source-plugin</artifactId>
+			<executions>
+				<execution>
 				<id>attach-sources</id>
 				<goals> <goal>jar</goal> </goals>
-			</execution>
-		</executions>
-	</plugin>            
-	<plugin> <!-- Create javadoc.jar -->
+				</execution>
+			</executions>
+		</plugin>            
+		<plugin> <!-- Create javadoc.jar -->
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-javadoc-plugin</artifactId>
 			<executions>
